@@ -57,15 +57,15 @@ public class CalculationApp {
                 resultString += sum;
                 break;
             case 2:
-                double difference = operand1 - operand2;
+                double difference = subtract(operand1, operand2);
                 resultString += difference;
                 break;
             case 3:
-                double product = operand1 * operand2;
+                double product = multiply(operand1, operand2);
                 resultString += product;
                 break;
             case 4: 
-                double floatingPointQuotient = operand1 / operand2;
+                double floatingPointQuotient = divide(operand1, operand2);
                 resultString += floatingPointQuotient;
                 break;
             case 5:
@@ -98,5 +98,48 @@ public class CalculationApp {
         return num1 + num2;
         
     } // end method add
+    
+     /**
+     * Returns the difference between two numeric operands, num1 and num2,
+     * such that num2 is subtracted from num1
+     * 
+     * @param num1 the first operand
+     * @param num2 the second operand
+     * @return the difference of num1 less (minus) num2
+     */
+    
+    public static double subtract(double num1, double num2)
+    {
+        return num1 - num2;
+        
+    } // end method subtract
+    
+     /**
+     * Returns the product of two numeric operands, num1 and num2
+     * 
+     * @param num1 the first operand
+     * @param num2 the second operand
+     * @return the product of num1 and num2
+     */
+    
+    public static double multiply(double num1, double num2)
+    {
+        return num1 * num2;
+        
+    } // end method multiply
+    
+     /**
+     * Returns the quotient of two floating-point operands, num1 and num2
+     * 
+     * @param num1 the first operand
+     * @param num2 the second operand
+     * @return the floating-point quotient of num1 divided by num2
+     */
+    
+    public static double divide(double num1, double num2)
+    {
+        return num1 / num2;
+        
+    } // end method divide
     
 } // end class CalculationApp
