@@ -52,32 +52,13 @@ public class CalculationApp {
         //       will help to make our code more modular and re-usable!
         switch( choice )
         {
-            case 1: 
-                double sum = add(operand1, operand2);
-                resultString += sum;
-                break;
-            case 2:
-                double difference = subtract(operand1, operand2);
-                resultString += difference;
-                break;
-            case 3:
-                double product = multiply(operand1, operand2);
-                resultString += product;
-                break;
-            case 4: 
-                double floatingPointQuotient = divide(operand1, operand2);
-                resultString += floatingPointQuotient;
-                break;
-            case 5:
-                int integerQuotient = (int)operand1 / (int)operand2;
-                resultString += integerQuotient;
-                break;
-            case 6:
-                int integerRemainder = (int)operand1 % (int)operand2;
-                resultString += integerRemainder;
-                break;
-            default:
-                break;
+            case 1 -> resultString += add(operand1, operand2);
+            case 2 -> resultString += subtract(operand1, operand2);
+            case 3 -> resultString += multiply(operand1, operand2);
+            case 4 -> resultString += divide(operand1, operand2);
+            case 5 -> resultString += divide((int)operand1,(int)operand2);
+            case 6 -> resultString += remainder((int)operand1, (int)operand2);
+            default -> resultString += "Invalid Choice";
         } // end switch
        
         /* TERMINATION PHASE */
@@ -140,6 +121,35 @@ public class CalculationApp {
     {
         return num1 / num2;
         
-    } // end method divide
+    } // end method divide (for floating-point division)
+    
+    /**
+     * Returns the quotient of two integer operands, num1 and num2
+     * 
+     * @param num1 the first operand
+     * @param num2 the second operand
+     * @return the integer quotient of num1 divided by num2
+     */
+    
+    public static int divide(int num1, int num2)
+    {
+       return num1 / num2; 
+        
+    } // end method divide (for integer division)
+    
+    /**
+     * Returns the integer remainder after peforming
+     * integer division on two integer operands, num1 and num2
+     * 
+     * @param num1 the first operand
+     * @param num2 the second operand
+     * @return the remainder after integer division of num1 divided by num2
+     */
+    
+    public static int remainder(int num1, int num2)
+    {
+       return num1 % num2; 
+        
+    } // end method remainder
     
 } // end class CalculationApp
