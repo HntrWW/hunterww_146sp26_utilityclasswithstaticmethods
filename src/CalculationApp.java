@@ -53,7 +53,7 @@ public class CalculationApp {
         switch( choice )
         {
             case 1: 
-                double sum = operand1 + operand2; 
+                double sum = add(operand1, operand2);
                 resultString += sum;
                 break;
             case 2:
